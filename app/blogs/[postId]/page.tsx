@@ -1,12 +1,12 @@
-export default function Blogs({params}:{
+export default async function Blogs({params}:{
     params:{
         postId :string
     }
 }){
-    const postId = params.postId;
+    const postId = (await params).postId;
 return <div className="flex flex-col justify-center h-screen">
             <div className="flex justify-center text-2xl">
-   I love you {postId}
+   Blog Page {postId}
    </div>
 </div>
 }
